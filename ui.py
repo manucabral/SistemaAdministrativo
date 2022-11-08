@@ -41,6 +41,7 @@ class SubWindow(QtWidgets.QWidget):
         for i in range(len(data)):
             for j in range(len(labels)):
                 self.table.setItem(i, j, QtWidgets.QTableWidgetItem(str(data[i][j])))
+                
         """
 
     def add_button(self, text: str, callback: callable, parentid: int = 0):
