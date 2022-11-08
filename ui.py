@@ -41,7 +41,6 @@ class SubWindow(QtWidgets.QWidget):
         for i in range(len(data)):
             for j in range(len(labels)):
                 self.table.setItem(i, j, QtWidgets.QTableWidgetItem(str(data[i][j])))
-                
         """
 
     def add_button(self, text: str, callback: callable, parentid: int = 0):
@@ -124,6 +123,7 @@ class Window(QtWidgets.QWidget):
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(argv)
-    main_window = Window(width=400, height=200, appname='Parches System Administrative', button_size=(200, 50), verbose=True)
+    main_window = Window(
+        width=400, height=200, appname='Parches System Administrative', button_size=(200, 50), verbose=True)
     main_window.show()
     exit(app.exec_())
